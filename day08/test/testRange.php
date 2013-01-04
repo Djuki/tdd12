@@ -7,11 +7,11 @@
  * To change this template use File | Settings | File Templates.
  */
 
-include __DIR__.'/../src/range.php';
-include __DIR__.'/../src/intrange.php';
-include __DIR__.'/../src/doublerange.php';
+include_once __DIR__.'/../src/range.php';
+include_once __DIR__.'/../src/intrange.php';
+include_once __DIR__.'/../src/doublerange.php';
 
-class TestRange extends PHPUnit_Framework_TestCase
+class TestRangeObject extends PHPUnit_Framework_TestCase
 {
     /**
      * Test is in range functionality

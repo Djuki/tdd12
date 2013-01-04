@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-include __DIR__.'/../src/bowling.php';
+include_once __DIR__.'/../src/bowling.php';
 
 class BowlingTest extends PHPUnit_Framework_TestCase
 {

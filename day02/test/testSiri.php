@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-include __DIR__.'/../src/siri.php';
+include_once __DIR__.'/../src/siri.php';
 
 class SiriTest extends PHPUnit_Framework_TestCase
 {

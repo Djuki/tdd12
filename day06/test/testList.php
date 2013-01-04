@@ -8,7 +8,7 @@
  */
 
 
-include __DIR__.'/../src/list.php';
+include_once __DIR__.'/../src/list.php';
 
 class TestList extends PHPUnit_Framework_TestCase
 {

@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-include __DIR__.'/../src/calcStat.php';
+include_once __DIR__.'/../src/calcStat.php';
 
 
 class RangeTest extends PHPUnit_Framework_TestCase

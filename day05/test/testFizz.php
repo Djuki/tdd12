@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-include __DIR__.'/../src/fizz.php';
+include_once __DIR__.'/../src/fizz.php';
 
 class FizzTest extends PHPUnit_Framework_TestCase
 {

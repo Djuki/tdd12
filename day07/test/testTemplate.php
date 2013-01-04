@@ -8,7 +8,7 @@
  */
 
 
-include __DIR__.'/../src/template.php';
+include_once __DIR__.'/../src/template.php';
 
 class TemplateTest extends PHPUnit_Framework_TestCase
 {

@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-include __DIR__.'/../src/mine.php';
+include_once __DIR__.'/../src/mine.php';
 
 class MineTest extends PHPUnit_Framework_TestCase
 {
