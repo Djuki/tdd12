@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit>
+    <testsuite name='Tests'>
+        <directory suffix='.php'>./day01/test/</directory>
+        <directory suffix='.php'>./day02/test/</directory>
+        <directory suffix='.php'>./day03/test/</directory>
+        <directory suffix='.php'>./day05/test/</directory>
+        <directory suffix='.php'>./day06/test/</directory>
+        <directory suffix='.php'>./day07/test/</directory>
+        <directory suffix='.php'>./day08/test/</directory>
+        <directory suffix='.php'>./day09/test/</directory>
+    </testsuite>
+</phpunit>
