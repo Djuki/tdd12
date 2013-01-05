@@ -8,16 +8,13 @@
  */
 
 error_reporting(E_ALL);
-include 'day06/src/list.php';
+include 'day11/src/card.php';
+include 'day11/src/poker.php';
 
 
 
-$list = new ReadList(5);
 
-$list->add('32323');
-$list->add('Dobrop je');
 
-foreach ($list as $item)
-{
-    var_dump($item);
-}
+$poker = new Poker();
+
+$poker->playRound('2C 3H 4S 8C AH', '2H 3D 5S 9C KD');
