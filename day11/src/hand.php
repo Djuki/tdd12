@@ -252,11 +252,19 @@ class Hand implements Iterator
         }
     }
 
+    /**
+     * Is Pair in hand
+     * @return bool
+     */
     public function isPair()
     {
         return $this->isSameValues(2);
     }
 
+    /**
+     * Is two pairs in hand
+     * @return bool
+     */
     public function isTwoPairs()
     {
         $pairsNumber = 0;
@@ -271,11 +279,19 @@ class Hand implements Iterator
         return $pairsNumber >= 2; // More than two pairs :)
     }
 
+    /**
+     * Is Three of a kind in hand
+     * @return bool
+     */
     public function isThreeOfaKind()
     {
         return $this->isSameValues(3);
     }
 
+    /**
+     * Is full house in the hand
+     * @return bool
+     */
     public function isFullHouse()
     {
         $pair = false;
@@ -297,21 +313,39 @@ class Hand implements Iterator
         return $pair and $three;
     }
 
+    /**
+     * Is flush in hand
+     * @return bool
+     */
     public function isFlush()
     {
         return $this->isSameSuits($this->handCards);
     }
 
+    /**
+     * Is four of a kind in hand
+     * @return bool
+     */
     public function isFourOfaKind()
     {
         return $this->isSameValues(4);
     }
 
+    /**
+     * Is straight in a hand
+     * @return bool
+     */
     public function isStraightFlush()
     {
         return $this->isStraight() and $this->isSameSuits($this->handCards);
     }
 
+    /**
+     * Helper function to check is same cards in hand
+     * Use for pairs, three or four same in a hand
+     * @param int $howMuchCards
+     * @return bool
+     */
     private function isSameValues($howMuchCards = 2)
     {
         foreach ($this->handCardsSorted as $cardValue => $sameCards)
@@ -325,6 +359,10 @@ class Hand implements Iterator
         return false;
     }
 
+    /**
+     * Is straight in a hand
+     * @return bool
+     */
     public function isStraight()
     {
         $cardInHand = count($this->handCards);
@@ -348,6 +386,11 @@ class Hand implements Iterator
         return $straight;
     }
 
+    /**
+     * Is same suits in card array
+     * @param $cards
+     * @return bool
+     */
     private function isSameSuits($cards)
     {
         $cardsInHand = count($cards);
@@ -364,12 +407,6 @@ class Hand implements Iterator
         return $same;
     }
 
-
-    function rewind() {
-
-        $this->position = 0;
-    }
-
     /**
      * Get different cards
      * @return int
@@ -377,6 +414,12 @@ class Hand implements Iterator
     public function getDifferentCards()
     {
         return $this->differentCards;
+    }
+
+
+    function rewind() {
+
+        $this->position = 0;
     }
 
     function current() {
