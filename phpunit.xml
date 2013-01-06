@@ -11,5 +11,6 @@
         <directory suffix='.php'>./day09/test/</directory>
         <directory suffix='.php'>./day10/test/</directory>
         <directory suffix='.php'>./day11/test/</directory>
+        <directory suffix='.php'>./day12/test/</directory>
     </testsuite>
 </phpunit>
