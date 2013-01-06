@@ -92,7 +92,6 @@ class HarryBooks
 
                 if ($copyBasket[$bookItem] == 0)
                 {
-                    //echo 'unset for'. $bookItem."\n";
                     unset($copyBasket[$bookItem]);
                 }
             }
