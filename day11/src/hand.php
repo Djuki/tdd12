@@ -213,10 +213,7 @@ class Hand implements Iterator
         }
         else if ($this->_is_FullHouse)
         {
-            // echo 'ddd';
-            // $this->scoreHands = 27;
             $this->countScoreInScope(2, 3);
-           // exit;
         }
         else if ($this->_is_FourOfaKind)
         {

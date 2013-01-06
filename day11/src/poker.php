@@ -11,6 +11,13 @@ class Poker
 {
 
 
+    /**
+     * Play game
+     * Return winner name or Tie
+     * @param $whiteCards
+     * @param $blackCards
+     * @return string
+     */
     public function playRound($whiteCards, $blackCards)
     {
         $playerWhite = new Hand($whiteCards);
