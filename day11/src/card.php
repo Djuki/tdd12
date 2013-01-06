@@ -76,7 +76,7 @@ class Card
      * Get card number
      * @return mixed
      */
-    public function getNumber()
+    public function getValue()
     {
         return $this->cardNumber;
     }
@@ -88,5 +88,15 @@ class Card
     public function getSuit()
     {
         return $this->cardSuit;
+    }
+
+    /**
+     * Get key index (value) by name
+     * @param $name
+     * @return mixed
+     */
+    static public function getValueByName($name)
+    {
+        return array_search($name, self::$numbers);
     }
 }

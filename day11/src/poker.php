@@ -10,62 +10,37 @@
 class Poker
 {
 
-    /**
-     * Definition of poker hands
-     * @var array
-     */
-    static protected $pokerHands = array (
-        1 => 'High',
-        2 => 'Pair',
-        3 => 'TwoPairs',
-        4 => 'ThreeOfaKind',
-        5 => 'Straight',
-        6 => 'Flush',
-        7 => 'FullHouse',
-        8 => 'FourOfaKind',
-        7 => 'StraightFlush',
-    );
-
-    /**
-     * Player one cards
-     * @var array
-     */
-    protected $playerWhite = array();
-
-    /**
-     * Player Two cards
-     * @var array
-     */
-    protected $playerBlack = array();
-
 
     public function playRound($whiteCards, $blackCards)
     {
-        $this->playerWhite = $this->readCards($whiteCards);
-        $this->playerBlack = $this->readCards($blackCards);
-    }
+        $playerWhite = new Hand($whiteCards);
+        $playerBlack = new Hand($blackCards);
+
+        $level_w = $playerWhite->getPokerLevelScore();
+        $level_b = $playerBlack->getPokerLevelScore();
 
 
-    /**
-     * Read car input and turd it into Card array
-     * @param $cards
-     * @return array
-     */
-    private function readCards($cards)
-    {
-        $cards = explode(' ', $cards);
-
-        $cardsArray = array();
-
-        foreach ($cards as $card)
+        if ($level_b != $level_w)
         {
-            list($number, $suit) = str_split($card);
-
-            $cardsArray[] = new Card($number, $suit);
+            return ($level_b > $level_w) ? 'black' : 'white';
         }
 
-        return  $cardsArray;
+        $hand_score_w =  $playerWhite->getScoreInHands();
+        $hand_score_b =  $playerBlack->getScoreInHands();
+
+        if ($hand_score_b != $hand_score_w)
+        {
+            return ($hand_score_b > $hand_score_w) ? 'black' : 'white';
+        }
+
+        $score_other_w = $playerWhite->getScoreForOtherCards();
+        $score_other_b = $playerBlack->getScoreForOtherCards();
+
+        if ($score_other_b != $score_other_w)
+        {
+            return ($score_other_b > $score_other_w) ? 'black' : 'white';
+        }
+
+        return 'tie';
     }
-
-
 }
