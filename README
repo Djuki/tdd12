@@ -1,4 +1,4 @@
-=12 TDDs of Christmas
+==12 TDDs of Christmas
 This is 12 days of code katas for TDD (test driven development). John Cleary started this and I wanted to be part of this.
 
 Every day John published one kata (task), we should solve in TDD style.
