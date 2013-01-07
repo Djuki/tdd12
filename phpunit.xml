@@ -4,6 +4,7 @@
         <directory suffix='.php'>./day01/test/</directory>
         <directory suffix='.php'>./day02/test/</directory>
         <directory suffix='.php'>./day03/test/</directory>
+        <directory suffix='.php'>./day04/test/</directory>
         <directory suffix='.php'>./day05/test/</directory>
         <directory suffix='.php'>./day06/test/</directory>
         <directory suffix='.php'>./day07/test/</directory>
