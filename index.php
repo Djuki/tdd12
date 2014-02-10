@@ -12,9 +12,6 @@ include 'day11/src/card.php';
 include 'day11/src/poker.php';
 
 
-
-
-
 $poker = new Poker();
 
 $poker->playRound('2C 3H 4S 8C AH', '2H 3D 5S 9C KD');
