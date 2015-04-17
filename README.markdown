@@ -1,4 +1,7 @@
 # 12 TDDs of Christmas
+
+![Codeship](https://codeship.com/projects/22843740-c709-0132-6318-52b3276ee51f/status?branch=master)
+
 This is 12 days of code katas for TDD (test driven development). John Cleary started this and I wanted to be part of this.
 
 Every day John published one kata (task), we should solve in TDD style.
