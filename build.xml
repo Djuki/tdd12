@@ -60,7 +60,7 @@
     <modified />
    </fileset>
 
-   <fileset dir="${basedir}/tests">
+   <fileset dir="${basedir}">
     <include name="**/*.php" />
     <modified />
    </fileset>
@@ -145,7 +145,6 @@
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
    <arg path="${basedir}" />
-   <arg path="${basedir}/tests" />
   </exec>
 
   <property name="phpcs.done" value="true"/>
